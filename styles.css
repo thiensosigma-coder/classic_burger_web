@@ -118,6 +118,39 @@ a {
   font-weight: 700;
 }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(233, 215, 176, 0.28);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 20px;
+  height: 2px;
+  margin: 0 auto;
+  background: var(--cream);
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
 .hero {
   position: relative;
   min-height: 100svh;
@@ -153,7 +186,7 @@ a {
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 8rem 0 5rem;
+  padding: 6.4rem 0 5rem;
   max-width: 760px;
 }
 
@@ -281,14 +314,9 @@ p {
 }
 
 .section-observe {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 800ms ease, transform 800ms ease;
-}
-
-.section-observe.in-view {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  transition: none;
 }
 
 section:not(.hero) {
@@ -691,8 +719,48 @@ section:not(.hero) {
 }
 
 @media (max-width: 760px) {
-  .site-nav a:not(.nav-call) {
-    display: none;
+  .nav-wrap {
+    position: relative;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: calc(100% + 0.65rem);
+    right: 0;
+    width: min(280px, 100%);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    padding: 0.8rem;
+    border-radius: 16px;
+    border: 1px solid rgba(233, 215, 176, 0.2);
+    background: rgba(14, 12, 9, 0.96);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 200ms ease, transform 200ms ease;
+  }
+
+  .site-nav.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .site-nav a {
+    width: 100%;
+    padding: 0.65rem 0.55rem;
+    border-radius: 10px;
+  }
+
+  .site-nav a:hover,
+  .site-nav a:focus-visible {
+    background: rgba(255, 255, 255, 0.05);
   }
 
   h1 {
@@ -704,7 +772,7 @@ section:not(.hero) {
   }
 
   .hero-content {
-    padding: 6.5rem 0 4rem;
+    padding: 5.7rem 0 4rem;
   }
 
   .testimonial-grid,
