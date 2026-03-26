@@ -29,3 +29,24 @@ if (navToggle && siteNav) {
     }
   });
 }
+
+const menuTabs = document.querySelectorAll(".menu-tab");
+const menuPanels = document.querySelectorAll(".menu-panel");
+
+if (menuTabs.length && menuPanels.length) {
+  menuTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const category = tab.dataset.category;
+
+      menuTabs.forEach((item) => {
+        const isActive = item === tab;
+        item.classList.toggle("is-active", isActive);
+        item.setAttribute("aria-selected", String(isActive));
+      });
+
+      menuPanels.forEach((panel) => {
+        panel.classList.toggle("is-active", panel.dataset.category === category);
+      });
+    });
+  });
+}

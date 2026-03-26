@@ -127,107 +127,161 @@
           </article>
           <div class="menu-note">
             <span class="dish-tag">Fast favorites</span>
-            <p>Top picks from the board include Chili Cheese Fries, Chicken Teriyaki, Steak Dinner, and the Asada Burrito.</p>
+            <p>Tap a category to focus the menu instantly. Prices are transcribed from your latest board photo.</p>
           </div>
         </div>
-        <div class="menu-grid">
-          <article class="menu-card">
+        <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+          <button class="menu-tab is-active" role="tab" aria-selected="true" data-category="burger">Burger</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-category="breakfast">Breakfast</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-category="burritos">Burritos</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-category="sandwiches">Sandwiches</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-category="teriyaki">Teriyaki</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-category="sides">Side Orders</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-category="dinner">Dinner</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-category="kids">Kids Meal</button>
+          <button class="menu-tab" role="tab" aria-selected="false" data-category="beverages">Beverages</button>
+        </div>
+
+        <div class="menu-grid menu-panels">
+          <article class="menu-card menu-panel is-active" data-category="burger">
             <div class="menu-card-header">
-              <span class="menu-kicker">Hot plates</span>
-              <h3>Dinner</h3>
+              <span class="menu-kicker">1/4 lb + specialty</span>
+              <h3>Burger</h3>
             </div>
-            <div class="menu-list">
-              <div class="menu-item"><span>Fish Dinner</span><strong>$13.99</strong></div>
-              <div class="menu-item"><span>Steak Dinner</span><strong>$16.99</strong></div>
+            <div class="menu-list menu-list-two-col">
+              <div class="menu-item"><span>Hamburger</span><strong>$3.89</strong></div>
+              <div class="menu-item"><span>Cheese Burger</span><strong>$4.49</strong></div>
+              <div class="menu-item"><span>Double Burger</span><strong>$5.89</strong></div>
+              <div class="menu-item"><span>Double Cheese Burger</span><strong>$6.49</strong></div>
+              <div class="menu-item"><span>Chili Burger</span><strong>$4.59</strong></div>
+              <div class="menu-item"><span>Chili Cheese Burger</span><strong>$4.89</strong></div>
+              <div class="menu-item"><span>Bacon Burger</span><strong>$5.89</strong></div>
+              <div class="menu-item"><span>Pastrami Burger</span><strong>$5.39</strong></div>
+              <div class="menu-item"><span>Pastrami Double Burger</span><strong>$6.89</strong></div>
+              <div class="menu-item"><span>Chicken Burger</span><strong>$4.89</strong></div>
+              <div class="menu-item"><span>Fish Burger</span><strong>$4.89</strong></div>
+              <div class="menu-item"><span>Teriyaki Burger</span><strong>$4.89</strong></div>
+              <div class="menu-item"><span>Avocado Burger</span><strong>$5.39</strong></div>
+              <div class="menu-item"><span>Family Pack: 5 Burgers + 3 Fries</span><strong>$22.75</strong></div>
             </div>
-            <p class="menu-footnote">Includes French fries, salad, and a dinner roll.</p>
           </article>
 
-          <article class="menu-card">
+          <article class="menu-card menu-panel" data-category="breakfast">
+            <div class="menu-card-header">
+              <span class="menu-kicker">Served until 11 AM</span>
+              <h3>Breakfast</h3>
+            </div>
+            <div class="menu-list">
+              <div class="menu-item"><span>Chorizo, Potatoes, Egg Breakfast Burrito</span><strong>$5.99</strong></div>
+              <div class="menu-item"><span>Pancake Plate</span><strong>$6.99</strong></div>
+              <div class="menu-item"><span>Ham &amp; Egg</span><strong>$6.99</strong></div>
+              <div class="menu-item"><span>Sausage &amp; Egg</span><strong>$6.99</strong></div>
+              <div class="menu-item"><span>Bacon &amp; Egg</span><strong>$6.99</strong></div>
+              <div class="menu-item"><span>Steak &amp; Egg</span><strong>$8.99</strong></div>
+              <div class="menu-item"><span>Chile Verde Chilaquiles</span><strong>$8.99</strong></div>
+            </div>
+          </article>
+
+          <article class="menu-card menu-panel" data-category="burritos">
             <div class="menu-card-header">
               <span class="menu-kicker">Morning to anytime</span>
               <h3>Burritos</h3>
             </div>
             <div class="menu-list">
-              <div class="menu-item"><span>Bean &amp; Cheese Burrito</span><strong>$7.99</strong></div>
-              <div class="menu-item"><span>Chicken Burrito</span><strong>$10.99</strong></div>
-              <div class="menu-item"><span>Asada Burrito</span><strong>$12.99</strong></div>
+              <div class="menu-item"><span>Bean &amp; Cheese Burrito</span><strong>$3.99</strong></div>
+              <div class="menu-item"><span>Chicken Burrito</span><strong>$3.99</strong></div>
+              <div class="menu-item"><span>Asada Burrito</span><strong>$6.49</strong></div>
             </div>
           </article>
 
-          <article class="menu-card menu-card-wide">
-            <div class="menu-card-header">
-              <span class="menu-kicker">Best with burgers</span>
-              <h3>Side Orders</h3>
-            </div>
-            <div class="menu-list menu-list-two-col">
-              <div class="menu-item"><span>French Fries (Small)</span><strong>$3.99</strong></div>
-              <div class="menu-item"><span>French Fries (Large)</span><strong>$6.99</strong></div>
-              <div class="menu-item"><span>Chili Cheese Fries (Small)</span><strong>$5.99</strong></div>
-              <div class="menu-item"><span>Chili Cheese Fries (Large)</span><strong>$9.99</strong></div>
-              <div class="menu-item"><span>Onion Rings (Small)</span><strong>$4.99</strong></div>
-              <div class="menu-item"><span>Onion Rings (Large)</span><strong>$7.99</strong></div>
-              <div class="menu-item"><span>Zucchini (Small)</span><strong>$4.99</strong></div>
-              <div class="menu-item"><span>Zucchini (Large)</span><strong>$7.99</strong></div>
-              <div class="menu-item"><span>Hot Dog</span><strong>$6.99</strong></div>
-              <div class="menu-item"><span>Chili Dog</span><strong>$7.99</strong></div>
-              <div class="menu-item"><span>Chili Cheese Dog</span><strong>$8.99</strong></div>
-              <div class="menu-item"><span>Chicken Nuggets (8 pcs)</span><strong>$5.99</strong></div>
-              <div class="menu-item"><span>Taquitos (4 pcs)</span><strong>$7.99</strong></div>
-              <div class="menu-item"><span>Chicken Salad</span><strong>$13.99</strong></div>
-              <div class="menu-item"><span>Steamed Rice</span><strong>$3.99</strong></div>
-              <div class="menu-item"><span>Green Salad</span><strong>$3.99</strong></div>
-            </div>
-          </article>
-
-          <article class="menu-card">
+          <article class="menu-card menu-panel" data-category="sandwiches">
             <div class="menu-card-header">
               <span class="menu-kicker">Diner classics</span>
               <h3>Sandwiches</h3>
             </div>
             <div class="menu-list">
-              <div class="menu-item"><span>Grilled Cheese</span><strong>$4.99</strong></div>
-              <div class="menu-item"><span>Grilled Ham &amp; Cheese</span><strong>$7.99</strong></div>
-              <div class="menu-item"><span>B.L.T.</span><strong>$7.99</strong></div>
-              <div class="menu-item"><span>Patty Melt</span><strong>$7.99</strong></div>
-              <div class="menu-item"><span>Tuna Sandwich</span><strong>$7.99</strong></div>
-              <div class="menu-item"><span>Chicken Breast Sandwich</span><strong>$8.99</strong></div>
-              <div class="menu-item"><span>Bacon &amp; Egg</span><strong>$9.99</strong></div>
-              <div class="menu-item"><span>Ham &amp; Egg Sandwich</span><strong>$9.99</strong></div>
-              <div class="menu-item"><span>Pastrami Sandwich</span><strong>$14.99</strong></div>
-              <div class="menu-item"><span>Steak Sandwich</span><strong>$14.99</strong></div>
+              <div class="menu-item"><span>Grilled Cheese</span><strong>$2.89</strong></div>
+              <div class="menu-item"><span>Grilled Ham &amp; Cheese</span><strong>$4.39</strong></div>
+              <div class="menu-item"><span>B.L.T.</span><strong>$4.89</strong></div>
+              <div class="menu-item"><span>Patty Melt</span><strong>$4.89</strong></div>
+              <div class="menu-item"><span>Tuna Sandwich</span><strong>$4.89</strong></div>
+              <div class="menu-item"><span>Bacon &amp; Egg</span><strong>$5.99</strong></div>
+              <div class="menu-item"><span>Pastrami Sandwich</span><strong>$7.89</strong></div>
             </div>
           </article>
 
-          <article class="menu-card">
+          <article class="menu-card menu-panel" data-category="teriyaki">
             <div class="menu-card-header">
               <span class="menu-kicker">Savory plates</span>
               <h3>Teriyaki</h3>
             </div>
             <div class="menu-list">
-              <div class="menu-item"><span>Chicken Teriyaki</span><strong>$13.99</strong></div>
-              <div class="menu-item"><span>Beef Teriyaki</span><strong>$15.99</strong></div>
-              <div class="menu-item"><span>Combo Teriyaki</span><strong>$16.99</strong></div>
-              <div class="menu-item"><span>Kid's Chicken Teriyaki</span><strong>$8.99</strong></div>
+              <div class="menu-item"><span>Chicken Teriyaki</span><strong>$7.99</strong></div>
+              <div class="menu-item"><span>Beef Teriyaki</span><strong>$8.99</strong></div>
+              <div class="menu-item"><span>Combo Teriyaki</span><strong>$10.49</strong></div>
+              <div class="menu-item"><span>Kid's Chicken Teriyaki</span><strong>$4.49</strong></div>
             </div>
           </article>
 
-          <article class="menu-card">
+          <article class="menu-card menu-panel" data-category="sides">
+            <div class="menu-card-header">
+              <span class="menu-kicker">Best with burgers</span>
+              <h3>Side Orders</h3>
+            </div>
+            <div class="menu-list menu-list-two-col">
+              <div class="menu-item"><span>French Fries (S)</span><strong>$2.09</strong></div>
+              <div class="menu-item"><span>French Fries (L)</span><strong>$3.89</strong></div>
+              <div class="menu-item"><span>Chili Cheese Fries (S)</span><strong>$3.89</strong></div>
+              <div class="menu-item"><span>Chili Cheese Fries (L)</span><strong>$6.89</strong></div>
+              <div class="menu-item"><span>Onion Rings (S)</span><strong>$2.89</strong></div>
+              <div class="menu-item"><span>Onion Rings (L)</span><strong>$4.89</strong></div>
+              <div class="menu-item"><span>Zucchini (S)</span><strong>$2.89</strong></div>
+              <div class="menu-item"><span>Zucchini (L)</span><strong>$4.89</strong></div>
+              <div class="menu-item"><span>Hot Dog</span><strong>$3.89</strong></div>
+              <div class="menu-item"><span>Chili Dog</span><strong>$4.39</strong></div>
+              <div class="menu-item"><span>Chili Cheese Dog</span><strong>$4.89</strong></div>
+              <div class="menu-item"><span>Chicken Nuggets</span><strong>$5.39</strong></div>
+              <div class="menu-item"><span>Taquitos (4 pcs)</span><strong>$3.39</strong></div>
+              <div class="menu-item"><span>Steamed Rice (S)</span><strong>$2.50</strong></div>
+              <div class="menu-item"><span>Steamed Rice (L)</span><strong>$3.50</strong></div>
+              <div class="menu-item"><span>Green Salad (S)</span><strong>$2.50</strong></div>
+              <div class="menu-item"><span>Green Salad (L)</span><strong>$3.50</strong></div>
+            </div>
+          </article>
+
+          <article class="menu-card menu-panel" data-category="dinner">
+            <div class="menu-card-header">
+              <span class="menu-kicker">Hot plates</span>
+              <h3>Dinner</h3>
+            </div>
+            <div class="menu-list">
+              <div class="menu-item"><span>Chicken Dinner</span><strong>$7.99</strong></div>
+              <div class="menu-item"><span>Fish Dinner</span><strong>$7.99</strong></div>
+              <div class="menu-item"><span>Steak Dinner</span><strong>$8.99</strong></div>
+            </div>
+          </article>
+
+          <article class="menu-card menu-panel" data-category="kids">
+            <div class="menu-card-header">
+              <span class="menu-kicker">For little legends</span>
+              <h3>Kids Meal</h3>
+            </div>
+            <div class="menu-list">
+              <div class="menu-item"><span>Grilled Cheese Sandwich</span><strong>$5.49</strong></div>
+              <div class="menu-item"><span>Chicken Nuggets</span><strong>$5.99</strong></div>
+            </div>
+            <p class="menu-footnote">Includes fries and a medium soda.</p>
+          </article>
+
+          <article class="menu-card menu-panel" data-category="beverages">
             <div class="menu-card-header">
               <span class="menu-kicker">Cold drinks</span>
               <h3>Beverages</h3>
             </div>
             <div class="menu-list">
-              <div class="menu-item"><span>Pepsi</span><strong>$1.99 / $2.59 / $2.99</strong></div>
-              <div class="menu-item"><span>Pepsi Zero Sugar</span><strong>$1.99 / $2.59 / $2.99</strong></div>
-              <div class="menu-item"><span>Starry (Lemon-Lime)</span><strong>$1.99 / $2.59 / $2.99</strong></div>
-              <div class="menu-item"><span>Dr Pepper</span><strong>$1.99 / $2.59 / $2.99</strong></div>
-              <div class="menu-item"><span>Crush Orange</span><strong>$1.99 / $2.59 / $2.99</strong></div>
-              <div class="menu-item"><span>Lemonade (Tropicana)</span><strong>$1.99 / $2.59 / $2.99</strong></div>
-              <div class="menu-item"><span>Pepsi Wild Cherry</span><strong>$1.99 / $2.59 / $2.99</strong></div>
-              <div class="menu-item"><span>Mug Root Beer</span><strong>$1.99 / $2.59 / $2.99</strong></div>
-              <div class="menu-item"><span>Coffee</span><strong>$2.59</strong></div>
-              <div class="menu-item"><span>Orange Juice</span><strong>$2.99</strong></div>
+              <div class="menu-item"><span>Coke, Diet Coke, Sprite, Orange, Lemonade, Cherry</span><strong>S $1.45 / M $1.75 / L $2.15</strong></div>
+              <div class="menu-item"><span>Coffee</span><strong>$1.80</strong></div>
+              <div class="menu-item"><span>Orange Juice</span><strong>$1.50</strong></div>
             </div>
           </article>
         </div>
